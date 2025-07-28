@@ -11,6 +11,7 @@ services:
       - db
     networks:
       - app_network
+      - n_network
     volumes:
       - .:/app
       - static_volume:/static
@@ -44,6 +45,8 @@ services:
       - media_volume:/media
     depends_on:
       - web
+    networks:
+      - n_network
 
 volumes:
   postgres_data:
@@ -53,4 +56,6 @@ volumes:
 
 networks:
   app_network:
+    driver: bridge
+  n_network:
     driver: bridge
