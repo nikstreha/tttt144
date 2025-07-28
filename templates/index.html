@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Upload</title>
+    <style>
+        textarea {
+            width: 500px;
+            height: 200px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Input JSON</h1>
+    <form method="post">
+        <textarea name="json_data"></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{{ url_for('show_data') }}">Look data</a>
+</body>
+</html>
